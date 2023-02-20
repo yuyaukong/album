@@ -1,9 +1,9 @@
 package com.example.album.respository
 
-import com.example.album.model.Album
+import com.example.album.model.Product
 import kotlinx.coroutines.flow.Flow
 
 interface  AlbumRepository {
-    suspend fun getAlbum(): Flow<Album>
+    suspend fun getProductList(): Flow<List<Product>>
 
 }

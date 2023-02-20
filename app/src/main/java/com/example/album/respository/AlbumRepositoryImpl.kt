@@ -1,7 +1,7 @@
 package com.example.album.respository
 
 import com.example.album.BuildConfig
-import com.example.album.model.Album
+import com.example.album.model.Product
 import com.example.album.network.AlbumApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -12,10 +12,10 @@ class  AlbumRepositoryImpl(
     private val service: AlbumApiService
 ): AlbumRepository {
 
-    override suspend fun getAlbum(): Flow<Album> {
+    override suspend fun getProductList(): Flow<List<Product>> {
         return flow {
-            val result = service.getAlbum(BuildConfig.API_ALBUM_URL)
-            emit(result)
+            val productList = service.getAlbum(BuildConfig.API_ALBUM_URL).results
+            emit(productList)
         }.flowOn(Dispatchers.IO)
     }
 
