@@ -6,7 +6,7 @@ import retrofit2.http.Url
 
 interface  AlbumApiService {
 
-    @GET
-    suspend fun getAlbum(@Url url: String): Album
+    @GET("search?term=jack+johnson&entity=album")
+    suspend fun getAlbum(): Album
 
 }

@@ -14,7 +14,7 @@ class  AlbumRepositoryImpl(
 
     override suspend fun getProductList(): Flow<List<Product>> {
         return flow {
-            val productList = service.getAlbum(BuildConfig.API_ALBUM_URL).results
+            val productList = service.getAlbum().results
             emit(productList)
         }.flowOn(Dispatchers.IO)
     }

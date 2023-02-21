@@ -23,7 +23,7 @@ class RetrofitModule {
 
     private fun createRetrofit(okClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.API_ALBUM_URL)
+            .baseUrl(BuildConfig.BASE_ALBUM_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okClient)
             .build()
