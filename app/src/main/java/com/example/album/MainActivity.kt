@@ -2,8 +2,10 @@ package com.example.album
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.album.ui.main.AlbumFragment
+import com.example.album.ui.album.AlbumFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

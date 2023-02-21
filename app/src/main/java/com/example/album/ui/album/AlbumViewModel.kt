@@ -1,4 +1,4 @@
-package com.example.album.ui.main
+package com.example.album.ui.album
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

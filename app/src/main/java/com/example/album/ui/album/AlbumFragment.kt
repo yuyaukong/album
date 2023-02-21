@@ -1,4 +1,4 @@
-package com.example.album.ui.main
+package com.example.album.ui.album
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -20,7 +20,6 @@ class AlbumFragment : Fragment(R.layout.fragment_album) {
     private lateinit var mBinding: FragmentAlbumBinding
 
     private val viewModel: AlbumViewModel by activityViewModels()
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         mBinding = FragmentAlbumBinding.inflate(inflater, container, false)
@@ -30,7 +29,7 @@ class AlbumFragment : Fragment(R.layout.fragment_album) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         mBinding.apply {
             viewModel.productList.observe(viewLifecycleOwner, {
-                
+
             })
         }
     }
