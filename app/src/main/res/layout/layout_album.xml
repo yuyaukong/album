@@ -6,6 +6,10 @@
         <variable
             name="product"
             type="com.example.album.model.Product" />
+        <variable
+            name="isBookmarkVisible"
+            type="Boolean" />
+        <import type="android.view.View"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,10 +18,24 @@
         <ImageView
             android:id="@+id/cover_image_view"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:imageUrl="@{product.artworkUrl100}"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/spacing_M"
+            app:imageUrl="@{product.img}"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bookmark_image_view"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="fitXY"
+            android:src="@{product.isBookmark ? @android:drawable/star_big_on : @android:drawable/star_big_off, default=@android:drawable/star_big_off}"
+            android:layout_margin="@dimen/spacing_M"
+            android:visibility="@{isBookmarkVisible ? View.VISIBLE : View.GONE}"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
