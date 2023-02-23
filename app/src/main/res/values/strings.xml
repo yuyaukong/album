@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Album</string>
+    <string name="main_page">Main Page</string>
+    <string name="bookmark_page">Bookmark Page</string>
 </resources>

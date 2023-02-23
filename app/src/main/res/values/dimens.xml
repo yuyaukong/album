@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nav_header_height">176dp</dimen>
+
+    <!--spacing-->
+    <dimen name="spacing_empty">0dp</dimen>
+    <dimen name="spacing_XS">2dp</dimen>
+    <dimen name="spacing_S">4dp</dimen>
+    <dimen name="spacing_S2">6dp</dimen>
+    <dimen name="spacing_M">8dp</dimen>
+    <dimen name="spacing_M2">10dp</dimen>
+    <dimen name="spacing_M3">12dp</dimen>
+    <dimen name="spacing_M4">14dp</dimen>
+    <dimen name="spacing_L">16dp</dimen>
+    <dimen name="spacing_L2">18dp</dimen>
+    <dimen name="spacing_L3">22dp</dimen>
+    <dimen name="spacing_XL">24dp</dimen>
+    <dimen name="spacing_XL2">28dp</dimen>
+    <dimen name="spacing_XL3">32dp</dimen>
+    <dimen name="spacing_XXL">36dp</dimen>
+    <dimen name="spacing_XXL2">38dp</dimen>
+    <dimen name="spacing_XXL3">40dp</dimen>
+    <dimen name="spacing_XXL4">42dp</dimen>
+    <dimen name="spacing_XXL5">44dp</dimen>
+    <dimen name="spacing_XXXL">56dp</dimen>
+</resources>
