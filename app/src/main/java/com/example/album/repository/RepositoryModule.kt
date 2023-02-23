@@ -1,5 +1,6 @@
-package com.example.album.respository
+package com.example.album.repository
 
+import android.content.Context
 import com.example.album.network.AlbumApiService
 import dagger.Module
 import dagger.Provides
@@ -10,15 +11,16 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object RespositoryModule {
+object RepositoryModule {
 
     @ExperimentalCoroutinesApi
     @Provides
     @Singleton
     fun provideAlbumRespository(
-        albumApiService: AlbumApiService
+        albumApiService: AlbumApiService,
+        context: Context
     ): AlbumRepository {
-        return AlbumRepositoryImpl(albumApiService)
+        return AlbumRepositoryImpl(albumApiService, context)
     }
 
 }

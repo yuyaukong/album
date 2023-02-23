@@ -1,6 +1,6 @@
 package com.example.album.domain.usecase
 
-import com.example.album.respository.AlbumRepository
+import com.example.album.repository.AlbumRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

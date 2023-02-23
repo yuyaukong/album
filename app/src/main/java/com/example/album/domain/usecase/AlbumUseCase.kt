@@ -6,6 +6,8 @@ import kotlinx.coroutines.flow.*
 
 interface AlbumUseCase {
 
-    suspend fun getProductList(): Flow<List<Product>>
+    suspend fun getProductListWithBookmark(): Flow<List<Product>>
+
+    suspend fun updateProductWithBookmark(collectionId: Long, isBookmark: Boolean)
 
 }
