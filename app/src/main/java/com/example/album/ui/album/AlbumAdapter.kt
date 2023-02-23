@@ -30,8 +30,10 @@ class AlbumAdapter(
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val binding = LayoutAlbumBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
-        binding.root.setOnClickListener {
-            binding.product?.let(onItemClicked)
+        if (!isShowBookmarkOnly) {
+            binding.root.setOnClickListener {
+                binding.product?.let(onItemClicked)
+            }
         }
         binding.isBookmarkVisible = !isShowBookmarkOnly
         return ViewHolder(binding)
